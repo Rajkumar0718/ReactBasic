@@ -1,0 +1,31 @@
+import React, { useState } from 'react'
+import Tooltip from '@mui/material/Tooltip';
+import UseEffecth from './UseEffecth';
+
+const UseStateh = () => {
+  const [count, setcount] = useState(0);  //this the syntax
+  const increment = () => {
+    setcount(()=>count + 1)
+  }
+  const decrement=()=>{
+    setcount(()=>count-1)
+  }
+  return (
+    <>
+      <p>
+        count:{count}
+      </p>
+      <Tooltip title="increment">
+      <button onClick={increment} style={{width:"5rem",height:"2rem",backgroundColor:"coral",border:"none",borderRadius:".5rem", cursor:"pointer"}} >increment</button>
+      </Tooltip>
+      <Tooltip title="decrement">
+      <button onClick={decrement} style={{width:"5rem",height:"2rem",backgroundColor:"coral",border:"none",borderRadius:".5rem", cursor:"pointer",marginLeft:"1rem"}} >decrement</button>
+      </Tooltip>
+      <UseEffecth counter={count}/>
+    </>
+  )
+}
+export default UseStateh
+
+
+// usestates are used in funtional component can now have local state without needing to be converted in class componenet
