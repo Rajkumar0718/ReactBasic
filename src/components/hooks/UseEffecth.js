@@ -9,7 +9,7 @@ const UseEffecth = (counter) => {
   useEffect(()=>{
     console.log("useEffect hook in update phase");
     return()=>{
-      console.log("unmounting the useeffect",counter )
+      console.log("unmounting the useeffect",count )
     }
   },[counter])
   // []=>mounting phase ->that execute only once
